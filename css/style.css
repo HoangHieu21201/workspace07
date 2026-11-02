@@ -5,6 +5,7 @@
     --grid-gutter: 24px;
     --color-white: #ffffff;
     --color-black: #121314;
+    --color-gray: #5E6971;
 }
 
 *,
@@ -18,42 +19,66 @@ body {
 }
 
 .container {
-   width: 100%;
-  max-width: var(--container-max-width);
-  margin-left: auto;
-  margin-right: auto;
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Header */
 .header-main__container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: center;
-    padding-block: 16px;
-    height: 156px;
+    min-height: 156px;
+    padding: 16px;
+}
+
+/* Navigation Menu */
+.header-main__nav:first-child {
+    min-width: 0;
 }
 
 .header-main__nav-list {
-    display: flex;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(5, 64px);
+    gap: 16px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .header-main__nav-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 40px;
     text-decoration: none;
-    color: var(--color-black);
-    font-family: 'Inter';
+    color: var(--color-gray);
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-size: 16px;
+    font-weight: 400;
     line-height: 24px;
+    text-align: center;
+     transition: all 0.3s ease-in-out;
 }
 
+.header-main__nav-list a:hover,
+.header-main__nav-list a:focus-visible {
+    color: var(--color-black);
+    font-weight: 600;
+    /* text a không dùng được transition tại sao? */
+}
+
+/* Logo */
 .header-main__logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    white-space: nowrap;
 }
 
 .header-main__logo a {
@@ -68,6 +93,7 @@ body {
 }
 
 .header-main__logo p {
+    margin: 4px 0 0;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -77,10 +103,104 @@ body {
     color: #5E6971;
 }
 
+/* Social Icons */
 .header-main__icon-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
     align-items: center;
+    justify-content: flex-end;
     gap: 10px;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
+.header-main__icon-list :hover,
+.header-main__icon-list :focus-visible {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    transition: all 0.3s ease-in-out;
+}
+
+.header-main__container>.header-main__nav:last-child {
+    justify-self: end;
+}
+
+.header-main__icon-item a {
+    color: var(--color-black);
+    font-size: large;
+}
+
+.header-main__icon-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    background-color: var(--color-white);
+    color: #121314;
+}
+
+@media (max-width: 1024px) {
+    .header-main__container {
+        grid-template-columns: minmax(0, 1fr) auto;
+        row-gap: 16px;
+    }
+
+    .header-main__logo {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+    }
+
+    .header-main__container>.header-main__nav:first-child {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-self: center;
+    }
+
+    .header-main__container>.header-main__nav:last-child {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+@media (max-width: 560px) {
+    .header-main__container {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 12px;
+        padding: 12px;
+    }
+
+    .header-main__logo {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    .header-main__container>.header-main__nav:last-child {
+        grid-column: 1;
+        grid-row: 2;
+        justify-self: center;
+    }
+
+    .header-main__container>.header-main__nav:first-child {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .header-main__nav-list {
+        grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+        gap: 8px;
+    }
+
+    .header-main__icon-list {
+        gap: 4px;
+    }
+
+    .header-main__icon-list li a {
+        width: 32px;
+        height: 32px;
+    }
 }
