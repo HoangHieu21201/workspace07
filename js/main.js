@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const isOpen = navList.classList.toggle('is-open');
             toggleBtn.classList.toggle('is-active', isOpen);
             toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            document.body.classList.toggle('menu-is-open', isOpen);
         });
 
         // Close menu when clicking any nav link
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 navList.classList.remove('is-open');
                 toggleBtn.classList.remove('is-active');
                 toggleBtn.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('menu-is-open');
             });
         });
 
@@ -25,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 navList.classList.remove('is-open');
                 toggleBtn.classList.remove('is-active');
                 toggleBtn.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('menu-is-open');
             }
         });
     }
