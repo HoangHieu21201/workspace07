@@ -7,12 +7,10 @@
     <title>7_Freelancer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@100..900&display=swap"
         rel="stylesheet">
-
 
     <link rel="stylesheet" href="./css/style.css">
 
@@ -20,7 +18,7 @@
 
 <body>
     <div class="bg-wrapper">
-        <header>
+        <header class="header">
             <div class="header-main">
                 <div class="container header-main__container">
                     <!-- Navigation Menu -->
@@ -54,16 +52,21 @@
                     <!-- Social Icons -->
                     <nav class="header-main__nav">
                         <ul class="header-main__icon-list">
-                            <li class="header-main__icon"><a href="#" aria-label="Facebook"><i
-                                        class="fab fa-facebook-f"></i></a></li>
-                            <li class="header-main__icon"><a href="#" aria-label="Twitter"><i
-                                        class="fab fa-twitter"></i></a></li>
-                            <li class="header-main__icon"><a href="#" aria-label="LinkedIn"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            <li class="header-main__icon"><a href="#" aria-label="Instagram"><i
-                                        class="fab fa-instagram"></i></a></li>
-                            <li class="header-main__icon"><a href="#" aria-label="Dribbble"><i
-                                        class="fab fa-dribbble"></i></a></li>
+                            <li class="header-main__icon"><a href="#" aria-label="Facebook">
+                                    <span class="header-main__social-icon header-main__social-icon--facebook"
+                                        aria-hidden="true"></span></a></li>
+                            <li class="header-main__icon"><a href="#" aria-label="Twitter">
+                                    <span class="header-main__social-icon header-main__social-icon--twitter"
+                                        aria-hidden="true"></span></a></li>
+                            <li class="header-main__icon"><a href="#" aria-label="LinkedIn">
+                                    <span class="header-main__social-icon header-main__social-icon--linkedin"
+                                        aria-hidden="true"></span></a></li>
+                            <li class="header-main__icon"><a href="#" aria-label="Instagram">
+                                    <span class="header-main__social-icon header-main__social-icon--instagram"
+                                        aria-hidden="true"></span></a></li>
+                            <li class="header-main__icon"><a href="#" aria-label="Dribbble">
+                                    <span class="header-main__social-icon header-main__social-icon--dribbble"
+                                        aria-hidden="true"></span></a></li>
                         </ul>
                     </nav>
 
@@ -86,32 +89,44 @@
         <button class="hero-scroll" type="button" aria-label="Scroll Down">
             <div class="hero-scroll__content">
                 <span class="hero-scroll__text">Scroll Down</span>
-                <span class="hero-scroll__icon"><i class="fa-solid fa-arrow-down-long"></i></span>
+                <span class="hero-scroll__icon">
+                    <span class="icon-arrow icon-arrow--down" aria-hidden="true"></span>
+                </span>
             </div>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" type="button" aria-label="Toggle dark theme" id="theme-toggle"
+            title="Toggle dark theme">
+            <img src="./assets/svg/Sun.svg" alt="Theme icon" class="theme-toggle__icon">
         </button>
     </div>
     <main>
 
-        <!-- About -->
-        <section class="about">
+        <!-- section About -->
+        <section class="section-about">
             <!-- Cột trái: Biography + Services + Locations -->
             <div class="about__left">
                 <div class="about__content">
-                    <h2>Biography</h2>
-                    <p>Vestibulum tempor enim metus, quis tempor urna facilisis sed. Sed nibh ipsum, molestie cursus
+                    <h2 class="about__title title-common-secondary">Biography</h2>
+                    <p class="about__description description-common-secondary">Vestibulum tempor enim metus, quis tempor
+                        urna facilisis sed. Sed nibh
+                        ipsum, molestie cursus
                         dolor vitae, molestie vestibulum quam. </p>
                 </div>
                 <div class="about__content">
-                    <h2>My Services</h2>
-                    <ul>
+                    <h2 class="about__title title-common-secondary">My Services</h2>
+                    <ul class="about__description description-common-secondary">
                         <li>User Experience Design</li>
                         <li>User Interface Design</li>
                         <li>Usability Testing</li>
                     </ul>
                 </div>
                 <div class="about__content">
-                    <h2>My Locations</h2>
-                    <p>4517 San Francisco Ave. Manchester, Kentucky 39495, Los Angeles, California, United States.</p>
+                    <h2 class="about__title title-common-secondary">My Locations</h2>
+                    <p class="about__description description-common-secondary">4517 San Francisco Ave. Manchester,
+                        Kentucky 39495, Los Angeles,
+                        California, United States.</p>
                 </div>
             </div>
 
@@ -190,12 +205,13 @@
                 </div>
             </div>
         </section>
-        <!-- Process -->
-        <section class="process">
+        <!-- section Process -->
+        <section class="section-process">
             <div class="container process__container">
                 <div class="process__header">
-                    <h2 class="process__title">My work process</h2>
-                    <p class="process__subtitle">Vestibulum tempor enim metus, quis tempor urna facilisis sed. Sed nibh
+                    <h2 class="process__title title-common-primary">My work process</h2>
+                    <p class="process__subtitle description-common-primary">Vestibulum tempor enim metus, quis tempor
+                        urna facilisis sed. Sed nibh
                         ipsum, molestie cursus dolor vitae, molestie vestibulum quam.</p>
                 </div>
 
@@ -208,8 +224,9 @@
                             </div>
                             <span class="process__card-number">01</span>
                         </div>
-                        <h3 class="process__card-title">Introduction</h3>
-                        <p class="process__card-desc">Vestibulum tempor enim metus, quis tepor urna facilisis sed. Sed
+                        <h3 class="process__card-title title-common-secondary">Introduction</h3>
+                        <p class="process__card-desc description-common-secondary">Vestibulum tempor enim metus, quis
+                            tepor urna facilisis sed. Sed
                             nibh ipsum, molestie cursus dolor vitae.</p>
                     </div>
 
@@ -221,8 +238,9 @@
                             </div>
                             <span class="process__card-number">02</span>
                         </div>
-                        <h3 class="process__card-title">UX Design</h3>
-                        <p class="process__card-desc">Vestibulum tempor enim metus, quis tepor urna facilisis sed. Sed
+                        <h3 class="process__card-title title-common-secondary">UX Design</h3>
+                        <p class="process__card-desc description-common-secondary">Vestibulum tempor enim metus, quis
+                            tepor urna facilisis sed. Sed
                             nibh ipsum, molestie cursus dolor vitae.</p>
                     </div>
 
@@ -234,8 +252,9 @@
                             </div>
                             <span class="process__card-number">03</span>
                         </div>
-                        <h3 class="process__card-title">UI Design</h3>
-                        <p class="process__card-desc">Vestibulum tempor enim metus, quis tepor urna facilisis sed. Sed
+                        <h3 class="process__card-title title-common-secondary">UI Design</h3>
+                        <p class="process__card-desc description-common-secondary">Vestibulum tempor enim metus, quis
+                            tepor urna facilisis sed. Sed
                             nibh ipsum, molestie cursus dolor vitae.</p>
                     </div>
 
@@ -247,23 +266,24 @@
                             </div>
                             <span class="process__card-number">04</span>
                         </div>
-                        <h3 class="process__card-title">Delivery</h3>
-                        <p class="process__card-desc">Vestibulum tempor enim metus, quis tepor urna facilisis sed. Sed
+                        <h3 class="process__card-title title-common-secondary">Delivery</h3>
+                        <p class="process__card-desc description-common-secondary">Vestibulum tempor enim metus, quis
+                            tepor urna facilisis sed. Sed
                             nibh ipsum, molestie cursus dolor vitae.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Biography -->
-        <section class="biography">
+        <!-- section Biography -->
+        <section class="section-biography">
             <div class="container biography__container">
                 <!-- Cột trái -->
                 <div class="biography__intro">
-                    <h1>Do you need a designer. Request a quote!</h1>
-                    <a href="mailto:info@marvin.com">info@marvin.com</a>
+                    <h2>Do you need a designer. Request a quote!</h2>
                     <p>Nunc aliquam luctus tortor, id lobortis massa tincidunt ut. Duis luctus posuere risus, et gravida
                         tortor interdum sed. Donec feugiat eu leo quis.</p>
+                    <a href="mailto:info@marvin.com">info@marvin.com</a>
                 </div>
 
                 <!-- Cột phải -->
@@ -275,108 +295,347 @@
                         <li class="meta-dot">•</li>
                         <li class="meta-item">Freelancer</li>
                     </ul>
-                    <h1>I'm a passionate designer with a keen eyes for details.</h1>
-                    <p>Nam posuere sapien vitae condimentum aliquam. Duis commodo cursus mauris semper tincidunt. Sed
+                    <h2 class="title-common-primary biography__title">I'm a passionate designer with a keen eyes for
+                        details.</h2>
+                    <p class="biography__description description-common-secondary">Nam posuere sapien vitae condimentum
+                        aliquam. Duis commodo cursus
+                        mauris semper tincidunt. Sed
                         interdum sodales dignissim. Integer gravida interdum felis vitae rhus. Fusce vehicula ante ac
                         enim scelerisque pellentesque. Ut aliquet turpis vel scelerisque. </p>
-                    <button class="biography__content-btn" type="button"><span>LET'S WORK TOGETHER</span><i
-                            class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn-common-primary biography__content-btn" type="button"><span class="label">LET'S WORK
+                            TOGETHER</span><span class="icon-arrow" aria-hidden="true"></span></button>
                 </div>
             </div>
         </section>
 
-        <!-- Case Study -->
-        <section class="case-study">
+        <!-- section Case Study -->
+        <section class="section-case-study">
             <div class="container case-study__container">
 
                 <div class="case-study__header">
-                    <h2 class="case-study__title">Recent case study</h2>
-                    <p class="case-study__subtitle">These are a selection of my recent works. Nunc aliquam luctus
+                    <h2 class="case-study__title title-common-primary">Recent case study</h2>
+                    <p class="case-study__subtitle description-common-primary">These are a selection of my recent works.
+                        Nunc aliquam luctus
                         tortor, id
                         lobortis massa tincidunt ut. Duis luctus posuere risus, et gravida tortor.</p>
                 </div>
 
                 <div class="case-study__grid">
                     <div class="case-study__item">
-                        <img src="./assets/images/study1.jpg" alt="Project 1">
+                        <img src="./assets/images/study1.jpg" alt="Relik - Admin Dashboard">
+                        <div class="case-study__overlay">
+                            <div class="case-study__content">
+                                <span class="case-study__tag">UI DESIGN &nbsp; BRAND IDENTITY</span>
+                                <h3 class="case-study__item-title">Relik - Admin Dashboard</h3>
+                                <p class="case-study__item-desc">Vivamus eleifend convallis ante, non pharetra libero
+                                    molestie laoreet. Donec id imperdiet lacus. Quisque erat ex, varius eget velit
+                                    feugiat.</p>
+                                <a href="#case-study" class="case-study__btn">
+                                    <span>View Case Study</span>
+                                    <span class="icon-arrow" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="case-study__item">
-                        <img src="./assets/images/study2.jpg" alt="Project 2">
+                        <img src="./assets/images/study2.jpg" alt="Relik - Admin Dashboard">
+                        <div class="case-study__overlay">
+                            <div class="case-study__content">
+                                <span class="case-study__tag">UI DESIGN &nbsp; BRAND IDENTITY</span>
+                                <h3 class="case-study__item-title">Relik - Admin Dashboard</h3>
+                                <p class="case-study__item-desc">Vivamus eleifend convallis ante, non pharetra libero
+                                    molestie laoreet. Donec id imperdiet lacus. Quisque erat ex, varius eget velit
+                                    feugiat.</p>
+                                <a href="#case-study" class="case-study__btn">
+                                    <span>View Case Study</span>
+                                    <span class="icon-arrow" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="case-study__item">
-                        <img src="./assets/images/study3.jpg" alt="Project 3">
+                        <img src="./assets/images/study3.jpg" alt="Relik - Admin Dashboard">
+                        <div class="case-study__overlay">
+                            <div class="case-study__content">
+                                <span class="case-study__tag">UI DESIGN &nbsp; BRAND IDENTITY</span>
+                                <h3 class="case-study__item-title">Relik - Admin Dashboard</h3>
+                                <p class="case-study__item-desc">Vivamus eleifend convallis ante, non pharetra libero
+                                    molestie laoreet. Donec id imperdiet lacus. Quisque erat ex, varius eget velit
+                                    feugiat.</p>
+                                <a href="#case-study" class="case-study__btn">
+                                    <span>View Case Study</span>
+                                    <span class="icon-arrow" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="case-study__item">
-                        <img src="./assets/images/study4.jpg" alt="Project 4">
+                        <img src="./assets/images/study4.jpg" alt="Relik - Admin Dashboard">
+                        <div class="case-study__overlay">
+                            <div class="case-study__content">
+                                <span class="case-study__tag">UI DESIGN &nbsp; BRAND IDENTITY</span>
+                                <h3 class="case-study__item-title">Relik - Admin Dashboard</h3>
+                                <p class="case-study__item-desc">Vivamus eleifend convallis ante, non pharetra libero
+                                    molestie laoreet. Donec id imperdiet lacus. Quisque erat ex, varius eget velit
+                                    feugiat.</p>
+                                <a href="#case-study" class="case-study__btn">
+                                    <span>View Case Study</span>
+                                    <span class="icon-arrow" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="case-study__item">
-                        <img src="./assets/images/study5.jpg" alt="Project 5">
+                        <img src="./assets/images/study5.jpg" alt="Relik - Admin Dashboard">
+                        <div class="case-study__overlay">
+                            <div class="case-study__content">
+                                <span class="case-study__tag">UI DESIGN &nbsp; BRAND IDENTITY</span>
+                                <h3 class="case-study__item-title">Relik - Admin Dashboard</h3>
+                                <p class="case-study__item-desc">Vivamus eleifend convallis ante, non pharetra libero
+                                    molestie laoreet. Donec id imperdiet lacus. Quisque erat ex, varius eget velit
+                                    feugiat.</p>
+                                <a href="#case-study" class="case-study__btn">
+                                    <span>View Case Study</span>
+                                    <span class="icon-arrow" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="case-study__item">
-                        <img src="./assets/images/study6.jpg" alt="Project 6">
+                        <img src="./assets/images/study6.jpg" alt="Relik - Admin Dashboard">
+                        <div class="case-study__overlay">
+                            <div class="case-study__content">
+                                <span class="case-study__tag">UI DESIGN &nbsp; BRAND IDENTITY</span>
+                                <h3 class="case-study__item-title">Relik - Admin Dashboard</h3>
+                                <p class="case-study__item-desc">Vivamus eleifend convallis ante, non pharetra libero
+                                    molestie laoreet. Donec id imperdiet lacus. Quisque erat ex, varius eget velit
+                                    feugiat.</p>
+                                <a href="#case-study" class="case-study__btn">
+                                    <span>View Case Study</span>
+                                    <span class="icon-arrow" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services -->
-        <section class="services">
+        <!-- section Services -->
+        <section class="section-services">
             <div class="container">
 
                 <div class="services__header">
-                    <h2 class="services__title">My services</h2>
-                    <p class="services__description">
+                    <h2 class="services__title title-common-primary">My services</h2>
+                    <p class="services__description description-common-primary">
                         Vestibulum tempor enim metus, quis tempor urna facilisis sed. Sed nibh ipsum, molestie cursus
                         dolor vitae, molestie vestibulum quam.
                     </p>
                 </div>
 
                 <div class="services__grid">
-
-                    <article class="service-card">
+                    <div class="service-card">
                         <img src="./assets/svg/service1.svg" alt="">
-                        <h3 class="service-card__title">Product Design</h3>
-                        <p class="service-card__description">
-                           Maecenas bibendum libero eu urna aliquet contum. In eu urna risus. Nam urna nibh, tempor a orci porttitor, interdum arcu.
+                        <h3 class="service-card__title title-common-secondary">Product Design</h3>
+                        <p class="service-card__description description-common-secondary">
+                            Maecenas bibendum libero eu urna aliquet contum. In eu urna risus. Nam urna nibh, tempor a
+                            orci porttitor, interdum arcu.
                         </p>
-                        <button class="service-card__btn"><span>READ MORE</span><i
-                            class="fa-solid fa-arrow-right"></i></button>
-                    </article>
+                        <button class="service-card__btn"><span>READ MORE</span><span class="icon-arrow"
+                                aria-hidden="true"></span></button>
+                    </div>
 
-                    <article class="service-card">
+                    <div class="service-card">
                         <img src="./assets/svg/service2.svg" alt="">
-                        <h3 class="service-card__title">User Experience Design</h3>
-                        <p class="service-card__description">
-                            Maecenas bibendum libero eu urna aliquet contum. In eu urna risus. Nam urna nibh, tempor a orci porttitor, interdum arcu.
+                        <h3 class="service-card__title title-common-secondary">User Experience Design</h3>
+                        <p class="service-card__description description-common-secondary">
+                            Maecenas bibendum libero eu urna aliquet contum. In eu urna risus. Nam urna nibh, tempor a
+                            orci porttitor, interdum arcu.
                         </p>
-                        <button class="service-card__btn"><span>READ MORE</span><i
-                            class="fa-solid fa-arrow-right"></i></button>
-                    </article>
+                        <button class="service-card__btn"><span>READ MORE</span><span class="icon-arrow"
+                                aria-hidden="true"></span></button>
+                    </div>
 
-                    <article class="service-card">
+                    <div class="service-card">
                         <img src="./assets/svg/service3.svg" alt="">
-                        <h3 class="service-card__title">User Interface Design</h3>
-                        <p class="service-card__description">
-                           Maecenas bibendum libero eu urna aliquet contum. In eu urna risus. Nam urna nibh, tempor a orci porttitor, interdum arcu.
+                        <h3 class="service-card__title title-common-secondary">User Interface Design</h3>
+                        <p class="service-card__description description-common-secondary">
+                            Maecenas bibendum libero eu urna aliquet contum. In eu urna risus. Nam urna nibh, tempor a
+                            orci porttitor, interdum arcu.
                         </p>
-                        <button class="service-card__btn"><span>READ MORE</span><i
-                            class="fa-solid fa-arrow-right"></i></button>
-                    </article>
+                        <button class="service-card__btn"><span>READ MORE</span><span class="icon-arrow"
+                                aria-hidden="true"></span></button>
+                    </div>
 
                 </div>
 
             </div>
         </section>
 
+        <!-- section feedback -->
+        <section class="section-feedback">
+            <div class="container feedback__container">
+                <div class="feedback__header">
+                    <h2 class="feedback__title title-common-primary">My clients feedback</h2>
+                    <p class="feedback__description description-common-primary">
+                        Vestibulum tempor enim metus, quis tempor urna facilisis sed. Sed nibh ipsum, molestie cursus
+                        dolor vitae, molestie vestibulum quam.
+                    </p>
+                </div>
+
+                <div class="feedback__slider">
+                    <button class="btn-common-icon feedback__prev">
+                        <span class="icon-arrow icon-arrow--left" aria-hidden="true"></span>
+                    </button>
+
+                    <div class="feedback__track">
+                        <div class="feedback__item">
+                            <div class="feedback__quote">
+                                <img src="/assets/svg/feedbackQuote.svg" alt="icon">
+                            </div>
+
+                            <p class="feedback__text">
+                                “Duis tempor ultrices elit sollicitudin aliquet. Nulla facilisi. Donec sit amet nunc
+                                eros. Etiam et nisi in diam ultrices luctus in a dui. Mauris in sem aliquet ligula
+                                convallis vestibulum. Etiam non erat aliquam, lacinia nis.”
+                            </p>
+
+                            <h3 class="feedback__author">
+                                Cameron Williamson
+                            </h3>
+
+                            <span class="feedback__position">
+                                CEO & Founder of Google
+                            </span>
+                        </div>
+                    </div>
+
+                    <button class="btn-common-icon feedback__next">
+                        <span class="icon-arrow" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container footer__container">
 
+            <!-- head -->
+            <div class="footer__cta">
+                <div class="footer__intro">
+                    <h2 class="footer__title "> Have a project idea. Get in touch and let's chat!</h2>
+
+                    <p class="footer__description">
+                        Do you fancy saying hi to me or do you want to get started with your project and you need my
+                        help? Feel free to contact me
+                    </p>
+
+                    <button class="btn-common-primary btn-common-primary--light footer__btn">
+                        <span>LET'S WORK TOGETHER</span> <span class="icon-arrow" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <div class="footer__platforms">
+                    <a href="#" class="platform__step">
+                        <img src="./assets/svg/Freelancer1.svg" alt="Fiverr">
+
+                        <div class="platform__content">
+                            <h3 class="platform__title">Fiverr</h3>
+                            <span class="platform__tag">@marvinrichard123</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="platform__step">
+                        <img src="./assets/svg/Freelancer2.svg" alt="Freelancer">
+
+                        <div class="platform__content">
+                            <h3 class="platform__title">Freelancer</h3>
+                            <span class="platform__tag">@marvinrichard123</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="platform__step">
+                        <img src="./assets/svg/Freelancer3.svg" alt="Upwork">
+
+                        <div class="platform__content">
+                            <h3 class="platform__title">Upwork</h3>
+                            <span class="platform__tag">@marvinrichard123</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- contact -->
+            <div class="footer__contact">
+
+                <div class="contact-item">
+                    <img src="./assets/svg/contact1.svg" alt="Email">
+                    <div class="contact-item__info">
+                        <span class="contact-item__label">
+                            Email Address
+                        </span>
+
+                        <a href="mailto:info@marvin.com" class="contact-item__value">
+                            info@marvin.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <img src="./assets/svg/contact2.svg" alt="Location">
+                    <div class="contact-item__info">
+                        <span class="contact-item__label">
+                            Location
+                        </span>
+
+                        <span class="contact-item__value">
+                            Los Angeles, USA
+                        </span>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <img src="./assets/svg/contact3.svg" alt="Phone">
+                    <div class="contact-item__info">
+                        <span class="contact-item__label">
+                            PHONE NUMBER
+                        </span>
+                        <a href="tel:+12025550190" class="contact-item__value">
+                            +1-202-555-0190
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- bottom -->
+            <div class="footer__bottom">
+                <div class="footer__brand">
+                    <h3 class="footer__name">Marvin Richard</h3>
+                    <p class="footer__role">UI/UX & Product Designer</p>
+                </div>
+
+                <nav class="footer__nav">
+                    <a href="#footer" class="footer__link is-active">Home</a>
+                    <a href="#footer">About</a>
+                    <a href="#footer">Project</a>
+                    <a href="#footer">Services</a>
+                    <a href="#footer">Contact</a>
+                </nav>
+
+                <small class="footer__copyright">
+                    © 2022 Marvin Richard
+                </small>
+            </div>
+        </div>
     </footer>
 
     <script src="./js/main.js"></script>

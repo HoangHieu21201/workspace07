@@ -31,4 +31,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // Dark Theme Toggle
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+
+        themeToggleBtn.addEventListener('click', function () {
+            const isDark = document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    }
 });
