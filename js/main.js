@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.toggle('menu-is-open', isOpen);
         });
 
-        // Close menu when clicking any nav link
         navList.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 navList.classList.remove('is-open');
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', function (e) {
             if (!toggleBtn.contains(e.target) && !navList.contains(e.target)) {
                 navList.classList.remove('is-open');
@@ -32,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Dark Theme Toggle
     const themeToggleBtn = document.getElementById('theme-toggle');
     if (themeToggleBtn) {
         const savedTheme = localStorage.getItem('theme');
@@ -44,5 +41,45 @@ document.addEventListener('DOMContentLoaded', function () {
             const isDark = document.body.classList.toggle('dark-theme');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
+    }
+
+    const prevBtn = document.querySelector('.feedback__prev');
+    const nextBtn = document.querySelector('.feedback__next');
+    const track = document.querySelector('.feedback__track');
+    const items = document.querySelectorAll('.feedback__item');
+
+    if (prevBtn && nextBtn && track && items.length > 0) {
+        let currentIndex = 0;
+        const totalSlides = items.length;
+
+        function updateSlide(index) {
+            currentIndex = (index + totalSlides) % totalSlides;
+            track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+        }
+
+        prevBtn.addEventListener('click', function () {
+            updateSlide(currentIndex - 1);
+        });
+
+        nextBtn.addEventListener('click', function () {
+            updateSlide(currentIndex + 1);
+        });
+
+        let startX = 0;
+        track.addEventListener('touchstart', function (e) {
+            startX = e.touches[0].clientX;
+        }, { passive: true });
+
+        track.addEventListener('touchend', function (e) {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+            if (Math.abs(diff) > 40) {
+                if (diff > 0) {
+                    updateSlide(currentIndex + 1);
+                } else {
+                    updateSlide(currentIndex - 1);
+                }
+            }
+        }, { passive: true });
     }
 });

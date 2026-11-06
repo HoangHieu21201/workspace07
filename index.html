@@ -75,21 +75,21 @@
         </header>
 
         <!-- Hero Intro -->
-        <section class="hero-intro container">
-            <div class="hero-intro__content">
+        <section class="p-section-keyvisual-intro container">
+            <div class="p-section-keyvisual-intro__content">
                 <h1>
-                    <span class="hero-intro__line">Hey, It’s Marvin Richard.</span>
-                    <span class="hero-intro__line">UI/UX & Product Designer</span>
-                    <span class="hero-intro__line">Based on Los Angeles.</span>
+                    <span class="p-section-keyvisual-intro__line">Hey, It’s Marvin Richard.</span>
+                    <span class="p-section-keyvisual-intro__line">UI/UX & Product Designer</span>
+                    <span class="p-section-keyvisual-intro__line">Based on Los Angeles.</span>
                 </h1>
             </div>
         </section>
 
-        <!-- hero-scroll -->
-        <button class="hero-scroll" type="button" aria-label="Scroll Down">
-            <span class="hero-scroll__content">
-                <span class="hero-scroll__text">Scroll down</span>
-                <span class="hero-scroll__icon">
+        <!-- p-section-keyvisual-scroll -->
+        <button class="p-section-keyvisual-scroll" type="button" aria-label="Scroll Down">
+            <span class="p-section-keyvisual-scroll__content">
+                <span class="p-section-keyvisual-scroll__text">Scroll down</span>
+                <span class="p-section-keyvisual-scroll__icon">
                     <span class="icon-arrow icon-arrow--down"></span>
                 </span>
             </span>
@@ -104,7 +104,7 @@
     <main>
 
         <!-- section About -->
-        <section class="section-about">
+        <section class="p-section-section-about">
             <!-- Cột trái: Biography + Services + Locations -->
             <div class="about__left">
                 <div class="about__content">
@@ -207,7 +207,7 @@
         </section>
 
         <!-- section Process -->
-        <section class="section-process">
+        <section class="p-section-process">
             <div class="container process__container">
                 <div class="process__header">
                     <h2 class="process__title title-common-primary">My work process</h2>
@@ -277,7 +277,7 @@
         </section>
 
         <!-- section Biography -->
-        <section class="section-biography">
+        <section class="p-section-biography">
             <div class="container biography__container">
                 <!-- Cột trái -->
                 <div class="biography__intro">
@@ -311,7 +311,7 @@
         </section>
 
         <!-- section Case Study -->
-        <section class="section-case-study">
+        <section class="p-section-case-study">
             <div class="container case-study__container">
 
                 <div class="case-study__header">
@@ -429,7 +429,7 @@
         </section>
 
         <!-- section Services -->
-        <section class="section-services">
+        <section class="p-section-services">
             <div class="container">
 
                 <div class="services__header">
@@ -480,7 +480,7 @@
         </section>
 
         <!-- section feedback -->
-        <section class="section-feedback">
+        <section class="p-section-feedback">
             <div class="container feedback__container">
                 <div class="feedback__header">
                     <h2 class="feedback__title title-common-primary">My clients feedback</h2>
@@ -491,33 +491,71 @@
                 </div>
 
                 <div class="feedback__slider">
-                    <button class="btn-common-icon feedback__prev">
+                    <button class="btn-common-icon feedback__prev" type="button" aria-label="Previous feedback">
                         <span class="icon-arrow icon-arrow--left" aria-hidden="true"></span>
                     </button>
 
-                    <div class="feedback__track">
-                        <div class="feedback__item">
-                            <div class="feedback__quote">
-                                <img src="/assets/svg/feedbackQuote.svg" alt="icon">
+                    <div class="feedback">
+                        <div class="feedback__track">
+                            <div class="feedback__item">
+                                <div class="feedback__quote">
+                                    <img src="./assets/svg/feedbackQuote.svg" alt="icon">
+                                </div>
+
+                                <p class="feedback__text">
+                                    “Duis tempor ultrices elit sollicitudin aliquet. Nulla facilisi. Donec sit amet nunc
+                                    eros. Etiam et nisi in diam ultrices luctus in a dui. Mauris in sem aliquet ligula
+                                    convallis vestibulum. Etiam non erat aliquam, lacinia nis.”
+                                </p>
+
+                                <h3 class="feedback__author">
+                                    Cameron Williamson
+                                </h3>
+
+                                <span class="feedback__position">
+                                    CEO & Founder of Google
+                                </span>
                             </div>
 
-                            <p class="feedback__text">
-                                “Duis tempor ultrices elit sollicitudin aliquet. Nulla facilisi. Donec sit amet nunc
-                                eros. Etiam et nisi in diam ultrices luctus in a dui. Mauris in sem aliquet ligula
-                                convallis vestibulum. Etiam non erat aliquam, lacinia nis.”
-                            </p>
+                            <div class="feedback__item">
+                                <div class="feedback__quote">
+                                    <img src="./assets/svg/feedbackQuote.svg" alt="icon">
+                                </div>
 
-                            <h3 class="feedback__author">
-                                Cameron Williamson
-                            </h3>
+                                <p class="feedback__text">
+                                    “Phasellus sodales interdum diam at egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi nec diam sit amet risus congue feugiat.”
+                                </p>
 
-                            <span class="feedback__position">
-                                CEO & Founder of Google
-                            </span>
+                                <h3 class="feedback__author">
+                                    Esther Howard
+                                </h3>
+
+                                <span class="feedback__position">
+                                    Design Lead at Meta
+                                </span>
+                            </div>
+
+                            <div class="feedback__item">
+                                <div class="feedback__quote">
+                                    <img src="./assets/svg/feedbackQuote.svg" alt="icon">
+                                </div>
+
+                                <p class="feedback__text">
+                                    “Curabitur non elit vel neque finibus pulvinar sed vel neque. Sed ultrices ante nec augue placerat, ac tincidunt urna varius. Suspendisse potenti. Vivamus vitae felis sem.”
+                                </p>
+
+                                <h3 class="feedback__author">
+                                    Robert Fox
+                                </h3>
+
+                                <span class="feedback__position">
+                                    VP of Product at Apple
+                                </span>
+                            </div>
                         </div>
                     </div>
 
-                    <button class="btn-common-icon feedback__next">
+                    <button class="btn-common-icon feedback__next" type="button" aria-label="Next feedback">
                         <span class="icon-arrow" aria-hidden="true"></span>
                     </button>
                 </div>
@@ -547,7 +585,8 @@
 
                 <div class="footer__platforms">
                     <a href="#" class="platform__step">
-                        <img src="./assets/svg/Freelancer1.svg" alt="Fiverr">
+                        <img src="./assets/svg/Freelancer1.svg" alt="Fiverr" class="platform__img platform__img--default">
+                        <img src="./assets/svg/Freelancer1-hover.svg" alt="Fiverr" class="platform__img platform__img--hover">
 
                         <div class="platform__content">
                             <h3 class="platform__title">Fiverr</h3>
@@ -556,7 +595,8 @@
                     </a>
 
                     <a href="#" class="platform__step">
-                        <img src="./assets/svg/Freelancer2.svg" alt="Freelancer">
+                        <img src="./assets/svg/Freelancer2.svg" alt="Freelancer" class="platform__img platform__img--default">
+                        <img src="./assets/svg/Freelancer2-hover.svg" alt="Freelancer" class="platform__img platform__img--hover">
 
                         <div class="platform__content">
                             <h3 class="platform__title">Freelancer</h3>
@@ -565,7 +605,8 @@
                     </a>
 
                     <a href="#" class="platform__step">
-                        <img src="./assets/svg/Freelancer3.svg" alt="Upwork">
+                        <img src="./assets/svg/Freelancer3.svg" alt="Upwork" class="platform__img platform__img--default">
+                        <img src="./assets/svg/Freelancer3-hover.svg" alt="Upwork" class="platform__img platform__img--hover">
 
                         <div class="platform__content">
                             <h3 class="platform__title">Upwork</h3>
@@ -621,16 +662,16 @@
             <!-- bottom -->
             <div class="footer__bottom">
                 <div class="footer__brand">
-                    <h3 class="footer__name">Marvin Richard</h3>
+                    <a href="#" class="footer__name">Marvin Richard</a>
                     <p class="footer__role">UI/UX & Product Designer</p>
                 </div>
 
                 <nav class="footer__nav">
-                    <a href="#footer" class="footer__link is-active">Home</a>
-                    <a href="#footer">About</a>
-                    <a href="#footer">Project</a>
-                    <a href="#footer">Services</a>
-                    <a href="#footer">Contact</a>
+                    <a href="#" class="footer__link is-active">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Project</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
                 </nav>
 
                 <small class="footer__copyright">
