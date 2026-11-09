@@ -19,11 +19,16 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* margin: 0; */
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   margin: 0;
+  width: 100%;
   overflow-x: hidden;
   transition:
     background-color 0.3s ease,
@@ -45,7 +50,7 @@ body.dark-theme {
 }
 
 .container {
-  width: 100%;
+  width: calc(100% - 40px);
   max-width: var(--container-max-width);
   margin-inline: auto;
 }
@@ -251,6 +256,7 @@ header.header {
 }
 
 .header-main {
+  width: calc(100% - 40px);
   max-width: var(--container-max-width);
   margin: auto;
 }
@@ -602,10 +608,10 @@ header.header {
   position: fixed;
   right: 80px;
   bottom: 40px;
-  width: 48px;
-  height: 48px;
+  width: 47px;
+  height: 47px;
   background-color: var(--color-black);
-  /* border: 2px solid var(--color-white); */
+  border: 2px solid transparent;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -843,7 +849,7 @@ body.dark-theme .service-card {
 /* p-section-section-about */
 .p-section-section-about {
   padding: 0;
-  width: 100%;
+  width: calc(100% - 40px);
   max-width: var(--container-max-width);
   margin-left: auto;
   margin-right: auto;
@@ -1110,7 +1116,8 @@ ul.about__description li {
 .process__card {
   padding: 26px 31px;
   height: 252px;
-  width: 312px;
+  width: 100%;
+  max-width: 312px;
   background-color: var(--color-white);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.04);
@@ -1555,7 +1562,8 @@ ul.about__description li {
 }
 
 .service-card {
-  width: 424px;
+  width: 100%;
+  max-width: 424px;
   height: 412px;
   position: relative;
   box-sizing: border-box;
@@ -1755,11 +1763,12 @@ ul.about__description li {
 .footer {
   background: #121314;
   padding-block: 100px 0;
+  width: 100%;
 }
 
 .footer__cta {
   display: grid;
-  grid-template-columns: 1fr 424px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 424px);
   gap: 160px;
   align-items: start;
   padding-bottom: 99px;
@@ -1777,13 +1786,13 @@ ul.about__description li {
 
 .footer__description {
   margin: 24px 0 14px;
-  width: 648px;
+  width: 100%;
+  max-width: 648px;
   font-family: 'Inter';
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
   color: #87909D;
-
 }
 
 .footer__intro {
@@ -1839,7 +1848,8 @@ ul.about__description li {
 }
 
 .platform__step {
-  width: 424px;
+  width: 100%;
+  max-width: 424px;
   height: 120px;
   display: flex;
   text-decoration: none;
@@ -1909,7 +1919,7 @@ ul.about__description li {
 /* contact */
 .footer__contact {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   text-align: center;
   padding: 100px 0 100px;
@@ -2033,12 +2043,6 @@ ul.about__description li {
 
 @media (max-width: 1280px) {
 
-  .container,
-  .header-main__container {
-    padding-inline: 32px;
-    box-sizing: border-box;
-  }
-
   .header-main__nav-list {
     gap: 18px;
   }
@@ -2048,11 +2052,6 @@ ul.about__description li {
   }
 
   /* About Section */
-  .p-section-section-about {
-    padding-inline: 32px;
-    box-sizing: border-box;
-  }
-
   .about__photo {
     width: 480px;
     height: 590px;
@@ -2079,6 +2078,28 @@ ul.about__description li {
     gap: 36px;
   }
 
+  .about__clients-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .about__clients-logo {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about__clients-logo img {
+    width: 100%;
+    max-width: 130px;
+    height: auto;
+    max-height: 48px;
+    object-fit: contain;
+  }
+
   .bg-wrapper {
     padding-bottom: 290px;
   }
@@ -2097,13 +2118,11 @@ ul.about__description li {
 
   /* Biography Section */
   .biography__container {
-    padding-inline: 32px;
-    box-sizing: border-box;
     gap: 32px;
   }
 
   .p-section-biography::before {
-    width: calc(32px + 280px);
+    width: calc(20px + 300px);
   }
 
   .biography__intro {
@@ -2164,6 +2183,10 @@ ul.about__description li {
   }
 
   /* Footer Section */
+  .footer {
+    width: 100%;
+  }
+
   .footer__cta {
     grid-template-columns: minmax(0, 1fr) minmax(0, 380px);
     gap: 60px;
@@ -2183,12 +2206,18 @@ ul.about__description li {
     padding: 16px 20px;
     gap: 16px;
   }
+
+  .footer__contact {
+    gap: 20px;
+    padding: 80px 0;
+  }
 }
 
 @media (max-width: 1100px) {
 
   .container,
   .header-main__container {
+    width: 100%;
     padding-inline: 24px;
     box-sizing: border-box;
   }
@@ -2206,6 +2235,7 @@ ul.about__description li {
   }
 
   .p-section-section-about {
+    width: 100%;
     padding-inline: 24px;
     box-sizing: border-box;
   }
@@ -2519,6 +2549,12 @@ ul.about__description li {
   .theme-toggle {
     right: 24px;
     bottom: 24px;
+  }
+
+  .about__description,
+  .process__card-desc,
+  .feedback__text {
+    text-align: justify;
   }
 
   /* About Section */
