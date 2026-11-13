@@ -4256,6 +4256,7 @@ body.dark-theme .about__clients-logo:focus-within>.about__clients-logo-color {
 
   .footer__btn {
     width: 100%;
+    margin-top: 8px;
     padding: 8px 12px;
     font-size: 10.5px;
     height: auto;
