@@ -4352,15 +4352,14 @@ body.dark-theme .about__clients-logo:focus-within>.about__clients-logo-color {
 
   .footer__bottom {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    gap: 12px;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 10px;
   }
 
   .footer__brand {
-    align-items: flex-start;
-    text-align: left;
+    justify-content: center;
+    align-items: center;
     gap: 2px;
   }
 
